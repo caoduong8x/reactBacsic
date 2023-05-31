@@ -8,6 +8,9 @@ class MyComponent extends React.Component {
     txtChange = (event) => {
         this.setState({ name: event.target.value });
     }
+    handleClick = () => {
+        alert('You have clicked me!');
+    }
     render() {
         return (
             <>
@@ -18,6 +21,9 @@ class MyComponent extends React.Component {
                 </div>
                 <div className='second'>
                     Hello my name is {this.state.age}. I am from the Vietnamese
+                </div>
+                <div className='third'>
+                    <button onClick={()=>this.handleClick()}>Click me</button>
                 </div>
             </>
         );
